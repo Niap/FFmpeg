@@ -4333,6 +4333,8 @@ elif is_in -static $cc $LDFLAGS && ! is_in --static $pkg_config $pkg_config_flag
 Note: When building a static binary, add --pkg-config-flags=\"--static\"."
 fi
 
+pkg_config=../fake-pkg-config
+
 if test $doxygen != $doxygen_default && \
   ! $doxygen --version >/dev/null 2>&1; then
     warn "Specified doxygen \"$doxygen\" not found, API documentation will fail to build."
